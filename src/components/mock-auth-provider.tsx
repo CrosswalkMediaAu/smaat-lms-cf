@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { createContext, useContext, useEffect, useState } from "react";
 
 type User = {
@@ -27,15 +26,15 @@ const AuthContext = createContext<AuthContextType>({
   isLoading: true,
 });
 
-export function AuthProvider({ children }: { children: React.ReactNode }) {
+export function MockAuthProvider({ children }: { children: React.ReactNode }) {
+  console.log("Using MockAuthProvider");
+
   const [user, setUser] = useState<User>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user is logged in
     const checkAuth = async () => {
       try {
-        // In a real app, you would verify the session/token with your backend
         const storedUser = localStorage.getItem("lms-user");
         if (storedUser) {
           setUser(JSON.parse(storedUser));
@@ -51,10 +50,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const login = async (email: string, password: string) => {
+    console.log("Mock login", password);
     setIsLoading(true);
     try {
-      // In a real app, you would make an API call to your auth endpoint
-      // This is a mock implementation
       const mockUser = {
         id: "user-1",
         name: email.split("@")[0],
@@ -73,10 +71,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const register = async (name: string, email: string, password: string) => {
+    console.log("Mock login:", password);
     setIsLoading(true);
     try {
-      // In a real app, you would make an API call to your registration endpoint
-      // This is a mock implementation
       const mockUser = {
         id: "user-" + Date.now(),
         name,

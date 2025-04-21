@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
-import { useAuth } from "./auth-provider";
+import { useAuth } from "./mock-auth-provider";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,6 +13,14 @@ import {
 } from "./ui/dropdown-menu";
 import { BookOpen, User } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
+
+// import {
+//   SignInButton,
+//   SignUpButton,
+//   SignedIn,
+//   SignedOut,
+//   UserButton,
+// } from '@clerk/nextjs'
 
 export function Header() {
   const { user, logout } = useAuth();
@@ -59,6 +67,13 @@ export function Header() {
         </div>
         <div className="flex items-center gap-4">
           <ModeToggle />
+          {/* <SignedOut>
+              <SignInButton />
+              <SignUpButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn> */}
           {user ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>

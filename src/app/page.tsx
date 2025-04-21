@@ -1,27 +1,29 @@
 import Link from "next/link";
-import { Button } from "@radix-ui/themes";
+import { Button } from "../components/ui/button";
 import { BookOpen, CheckCircle, GraduationCap, Users } from "lucide-react";
 
 export default function Home() {
   // Mock courses data (replace with your actual data source)
-  const mockCourses = [
-    { id: "1", title: "Introduction to React" },
-    { id: "2", title: "Advanced JavaScript" },
-  ];
+  // const mockCourses = [
+  //   { id: "1", title: "Introduction to React" },
+  //   { id: "2", title: "Advanced JavaScript" },
+  // ];
 
   // Get published courses from localStorage or use mock data
-  const getPublishedCourses = () => {
-    try {
-      const publishedCoursesData = localStorage.getItem("published-courses");
-      if (publishedCoursesData) {
-        return JSON.parse(publishedCoursesData);
-      }
-    } catch (error) {
-      console.error("Error getting published courses:", error);
-    }
-    // Default to showing all mock courses as published
-    return mockCourses;
-  };
+  // const getPublishedCourses = () => {
+  //   try {
+  //     const publishedCoursesData = localStorage.getItem("published-courses");
+  //     if (publishedCoursesData) {
+  //       return JSON.parse(publishedCoursesData);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error getting published courses:", error);
+  //   }
+  //   // Default to showing all mock courses as published
+  //   return mockCourses;
+  // };
+
+  // const publishedCourses = getPublishedCourses(); //added to fix typescript error and below in h1
 
   return (
     <div className="flex flex-col">
