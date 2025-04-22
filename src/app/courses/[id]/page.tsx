@@ -53,7 +53,6 @@ export default function CourseDetailsPage() {
             <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
-              <TabsTrigger value="instructor">Instructor</TabsTrigger>
             </TabsList>
             <TabsContent value="overview" className="mt-4 space-y-4">
               <div>
