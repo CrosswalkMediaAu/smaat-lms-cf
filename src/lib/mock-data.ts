@@ -13,6 +13,7 @@ export const mockCourses = [
     category: "Web Development",
     rating: 4.7,
     students: 1245,
+    status: "published",
   },
   {
     id: "course-2",
@@ -27,6 +28,7 @@ export const mockCourses = [
     category: "Frontend",
     rating: 4.9,
     students: 876,
+    status: "published",
   },
   {
     id: "course-3",
@@ -41,6 +43,7 @@ export const mockCourses = [
     category: "Backend",
     rating: 4.6,
     students: 932,
+    status: "draft",
   },
   {
     id: "course-4",
@@ -55,6 +58,7 @@ export const mockCourses = [
     category: "Design",
     rating: 4.8,
     students: 1567,
+    status: "draft",
   },
   {
     id: "course-5",
@@ -69,6 +73,7 @@ export const mockCourses = [
     category: "Full-Stack",
     rating: 4.5,
     students: 1089,
+    status: "draft",
   },
   {
     id: "course-6",
@@ -83,6 +88,7 @@ export const mockCourses = [
     category: "Mobile",
     rating: 4.7,
     students: 743,
+    status: "draft",
   },
 ];
 

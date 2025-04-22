@@ -11,7 +11,7 @@ import {
 } from "../../components/ui/tabs";
 import { EnrolledCourseCard } from "../../components/enrolled-course-card";
 import { mockEnrolledCourses, mockCourses } from "../../lib/mock-data";
-import type { Course } from "../../lib/types"; // or wherever you put it
+import type { Course } from "@/lib/types";
 
 export default function MyCoursesPage() {
   const { user, isLoading } = useAuth();
